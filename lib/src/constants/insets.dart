@@ -1,6 +1,6 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Insets {
+abstract class Insets {
   /// 0
   static const double none = 0;
 

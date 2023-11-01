@@ -11,19 +11,19 @@ extension OffsetExtension on num {
 }
 
 extension EdgeInsetsExtension on num {
-  EdgeInsets get edgeInsetsT => EdgeInsets.only(top: h);
+  EdgeInsets get edgeInsetsT => EdgeInsets.only(top: toDouble());
 
-  EdgeInsets get edgeInsetsB => EdgeInsets.only(bottom: h);
+  EdgeInsets get edgeInsetsB => EdgeInsets.only(bottom: toDouble());
 
-  EdgeInsets get edgeInsetsL => EdgeInsets.only(left: w);
+  EdgeInsets get edgeInsetsL => EdgeInsets.only(left: toDouble());
 
-  EdgeInsets get edgeInsetsR => EdgeInsets.only(right: w);
+  EdgeInsets get edgeInsetsR => EdgeInsets.only(right: toDouble());
 
-  EdgeInsets get edgeInsetsV => EdgeInsets.symmetric(vertical: h);
+  EdgeInsets get edgeInsetsV => EdgeInsets.symmetric(vertical: toDouble());
 
-  EdgeInsets get edgeInsetsH => EdgeInsets.symmetric(horizontal: w);
+  EdgeInsets get edgeInsetsH => EdgeInsets.symmetric(horizontal: toDouble());
 
-  EdgeInsets get edgeInsetsA => EdgeInsets.all(r);
+  EdgeInsets get edgeInsetsA => EdgeInsets.all(toDouble());
 }
 
 extension BorderRadiusExtension on num {
@@ -58,12 +58,20 @@ extension ListNumExtensions on List<num> {
   /// First value is for vertical inset and Second value is for horizontal inset
   EdgeInsets get edgeInsetSymmetrical {
     assert(length == 2, 'The list can only have 2 elements');
-    return EdgeInsets.symmetric(vertical: this[0].h, horizontal: this[1].h);
+    return EdgeInsets.symmetric(
+      vertical: this[0].toDouble(),
+      horizontal: this[1].toDouble(),
+    );
   }
 
   EdgeInsets get edgeInsetsLTRB {
     assert(length == 4, 'The list must be have only 4 elements');
-    return EdgeInsets.fromLTRB(this[0].r, this[1].r, this[2].r, this[3].r);
+    return EdgeInsets.fromLTRB(
+      this[0].toDouble(),
+      this[1].toDouble(),
+      this[2].toDouble(),
+      this[3].toDouble(),
+    );
   }
 
   Offset get offset => Offset(this[0].toDouble(), this[1].toDouble());

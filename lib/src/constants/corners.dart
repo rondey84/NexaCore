@@ -1,4 +1,4 @@
-class Corners {
+abstract class Corners {
   /// 4
   static const double xxs = 4;
 

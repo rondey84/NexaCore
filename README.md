@@ -15,7 +15,11 @@ NexaCore is a comprehensive Flutter toolkit designed to enhance the development 
 
 ```dart
 dependencies:
-  nexacore: https://github.com/rondey84/NexaCore.git
+  flutter:
+    sdk: flutter
+
+  nexacore: 
+    git: https://github.com/rondey84/NexaCore.git
 ```
 
 ## Usage
