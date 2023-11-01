@@ -1,0 +1,26 @@
+name: nexacore
+description: Common UI used for other projects.
+version: 0.0.1
+repository:
+issue_tracker:
+topics:
+  - ui
+  - widgets
+
+environment:
+  sdk: ">=3.1.4 <4.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  dio: ^5.3.3
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.0
+  pretty_dio_logger: ^1.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
